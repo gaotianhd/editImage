@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>在线图片编辑</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body style="background:black">
+    <img src="" id="img" style="display:none">
+    <!-- 显示的canvas -->
+    <canvas id="canvas">
+      你的浏览器不支持canvsas
+    </canvas>
+    <!-- 水印canvas -->
+    <canvas id="watermark-canvas"
+    style="display:none;margin:0 auto;border:1px solid #aaa">
+      你的浏览器不支持canvsas
+    </canvas>
+    <!-- 放大镜canvas -->
+    <canvas id="offCanvas" style="display:none">
+    </canvas>
+    <input type="file" id="file">
+    <div id="list" class="list">
+      <h1>控制面板</h1>
+
+      <!-- 放大镜 -->
+      <a href="#" id="magnbtn" class="btn">开启放大镜</a>  ps:只能放大原图
+      <div id="magnifier" class="magnifier">
+
+        <div class="magncontrol">
+
+          <span id="parameterList">
+            <span id="parameter"></span>
+            <span id="size"></span>
+            <!-- <input type="file" id="file"> -->
+          </span>
+          <div class="mulrange_div">
+            放大镜倍数：<input id="mulrange" type="range" min="1.5" value="1.5" max="3" step="0.01">
+          </div>
+          <div class="sizerange_div">
+            放大镜大小：<input id="sizerange" type="range" min="50" value="100" max="200" step="5">
+          </div>
+
+        </div>
+      </div>
+      <!-- 滤镜 -->
+      <a href="#" id="pixelbtn" class="btn">开启滤镜</a><br/>
+      <div id="pixels" class="pixels">
+        <span id="curentpixel">0</span>
+        <a href="javascript:restore()">还原 restore</a><br/>
+        <a href="javascript:greyEffect()">灰度滤镜 Grey</a><br/>
+        <a href="javascript:retroEffect()">复古滤镜 Retro</a><br/>
+        <a href="javascript:blackAndWhiteEffect()">黑白滤镜 black and white</a><br/>
+        <a href="javascript:AntiColorEffect()">反色滤镜 Anti-color</a><br/>
+        <a href="javascript:blurEffect()">模糊滤镜 blur</a><br/>
+        <a href="javascript:mosaicEffect()">马赛克滤镜 mosaic</a><br/>
+      </div>
+      <!-- 水印 -->
+      <div id="watermark" class="watermark">
+        水印位置: <br/>
+        <label for="pos1"> <input id="pos1" type="radio" name="position" value="leftAndTop"> 左上角 </label>
+        <label for="pos2"> <input id="pos2" type="radio" name="position" value="rightAndTop"> 右上角 </label>
+        <label for="pos3"> <input id="pos3" type="radio" name="position" value="leftAndBottom"> 左下角 </label>
+        <label for="pos4"> <input id="pos4" type="radio" name="position" value="rightAndBottom"> 右下角 </label>
+        <label for="pos5"> <input id="pos5" type="radio" name="position" value="center"> 中心 </label><br/>
+        水印内容: <br/>
+        <input id="WMContent" class="WMContent" type="text" placeholder="内容不能超过20个字符" maxlength="20">
+      </div>
+      <a href="#" id="watermarkbtn" class="btn">添加水印</a>
+      <a href="#" id="watermarkdel" class="btn">删除水印</a>
+    </div>
+    <div style="clear:both"></div>
+  </body>
+  <script type="text/javascript" src="./js/variable.js"></script>
+  <script type="text/javascript" src="./js/control.js"></script>
+  <script type="text/javascript" src="./js/magnifier.js"></script>
+  <script type="text/javascript" src="./js/watermark.js"></script>
+  <script type="text/javascript" src="./js/pixels.js"></script>
+  <script type="text/javascript">
+
+    </script>
+</html>

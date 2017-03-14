@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  background: black;
+}
+#parameterList span{
+  display: block;
+}
+#canvas{
+  margin-left: 300px;
+  display:block;
+  border:1px solid #aaa
+}
+.list{
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 250px;
+  color: white;
+}
+.magnifier{
+  height: 0;
+  overflow: hidden;
+  /*display: none;*/
+  transition: all 0.5s;
+}
+.list input[type="range"]{
+  width:200px;
+}
+.list > div{
+  width: 250px;
+  margin: 10px auto;
+}
+.list h1{
+  color: white;
+  font-weight: bold;
+  font-family: Microsoft Yahei;
+}
+.list .btn{
+  display: inline-block;
+  background-color: #8b0;
+  color: white;
+  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.list .btn:hover{
+  text-decoration: none;
+  background-color: #7a0;
+}
+.pixels{
+  /*display: none;*/
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.pixels a{
+   color: white;
+   text-decoration: none;
+}
+.pixels a:hover{
+  color:#c7b6bb;
+}
+.pixels #curentpixel{
+  display: none;
+}
+.WMContent{
+  margin-top: 10px;
+  background: #d4ccce;
+  color: #350d0d;
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-family: cursive;
+  padding-left: 10px;
+}
+.watermark label{
+  display: inline-block;
+  width: 70px;
+  margin: 10px 20px;
+  cursor: pointer;
+}
